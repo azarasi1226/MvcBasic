@@ -19,7 +19,7 @@ namespace MvcBasic
             //データベース初期化設定
             Database.SetInitializer<MvcBasicContext>(new MvcBasicInitializer());
 
-            //ビューエンジンをRazorだけに
+            //ビューエンジンをRazorだけに（実行速度が少し上がる）
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
         }
