@@ -10,13 +10,18 @@ namespace MvcBasic
     {
         protected void Application_Start()
         {
+            //WEBアプリケーション起動設定
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            //データベース設定
+            //データベース初期化設定
             Database.SetInitializer<MvcBasicContext>(new MvcBasicInitializer());
+
+            //ビューエンジンをRazorだけに
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new RazorViewEngine());
         }
     }
 }
