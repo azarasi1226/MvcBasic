@@ -183,6 +183,7 @@
     <Content Include="Views\Members\Edit.cshtml" />
     <Content Include="Views\Members\Index.cshtml" />
     <Content Include="Views\Home\Contact.Mobile.cshtml" />
+    <Content Include="Views\Home\Contact.iphone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
