@@ -30,7 +30,18 @@ namespace MvcBasic
                 {
                     ContextCondition = c =>
                         c.Request.UserAgent.Contains("iPhone")
-                });
+                }
+            );
+
+            //Androidê—pƒy[ƒW‚É”ò‚Î‚·ˆ—‚ð“o˜^
+            DisplayModeProvider.Instance.Modes.Insert(1,
+                new DefaultDisplayMode("Android")
+                {
+
+                    ContextCondition = c =>
+                        c.Request.UserAgent.Contains("Android")
+                }
+            );
         }
     }
 }

@@ -19,6 +19,9 @@ namespace MvcBasic.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+            string userAgent = Request.Browser.Capabilities[""].ToString();
+
+            ViewBag.userAgent = userAgent;
 
             return View();
         }
