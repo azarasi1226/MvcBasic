@@ -1,0 +1,4 @@
+﻿@*Create画面ではnullが代入されるため*@
+@model System.DateTime?
+
+@Html.TextBoxFor(model => model, new{ @class = "form-cntrol cal"})

@@ -53,6 +53,7 @@ namespace MvcBasic.DataBase.Model
                 }
             };
 
+
             members.ForEach(m => context.Members.Add(m));
             context.SaveChanges();
         }

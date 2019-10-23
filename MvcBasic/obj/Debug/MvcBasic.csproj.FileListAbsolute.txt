@@ -260,3 +260,4 @@ D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CoreCompileI
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CopyComplete
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.dll
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.pdb
+D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\ja\EntityFramework.SqlServer.resources.dll
