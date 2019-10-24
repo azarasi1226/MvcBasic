@@ -9,6 +9,7 @@ namespace MvcBasic.DataBase.Model
     {
         protected override void Seed(MvcBasicContext context)
         {
+            // メンバーの初期化
             var members = new List<Member>
             {
                 new Member

@@ -131,6 +131,9 @@
     <Compile Include="Controllers\BeginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
+    <Compile Include="DataBase\Entity\Article.cs" />
+    <Compile Include="DataBase\Entity\Author.cs" />
+    <Compile Include="DataBase\Entity\Comment.cs" />
     <Compile Include="DataBase\Entity\Member.cs" />
     <Compile Include="DataBase\Model\MvcBasicContext.cs" />
     <Compile Include="DataBase\Model\MvcBasicInitializer.cs" />
