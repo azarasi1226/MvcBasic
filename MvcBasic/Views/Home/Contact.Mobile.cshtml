@@ -1,4 +1,5 @@
-﻿@{
+﻿@using MvcBasic.Helpers
+@{
     ViewBag.Title = "モバイルContac";
 }
 <h2>@ViewBag.Title.　モバイル版です</h2>
@@ -15,7 +16,8 @@
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
     <p>@Url.Action("Test", "Member", new { id="aaa", tanaka="aaa"})</p>
-    <p>@Url.Content("~/私の名前は神です")</p>
-    <p>@Html.Raw("楽しいか書かああ</p>a")</p>
+    <p>@Url.Content("~/ssssssss")</p>
+    <p>@Html.Raw("エンコード処理されずに出力</p>a")</p>
     <p>@Url.Encode("><<>><>")</p>
+    @MyHelper.Mailto("andou1226@gmail.com","SEAL><<><><><><>br<>br<>p</html><p>aa</p> んへのリンクです")
 </address>
