@@ -7,7 +7,7 @@
         // カンマ区切りでテキストを分解し、入力値valueと順に比較
         var list = param.split(',');
         for (var i = 0, len = list.length; i < len; i++) {
-            if (value.indexOf(list[i]) !== -1) {
+            if (value.indexOf(list[i]) !== -1) {yeeer
                 return false;
             }
         }

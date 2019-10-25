@@ -34,7 +34,7 @@ namespace MvcBasic.Controllers
                 Email = x.Email
             }).ToList();
 
-            return View(db.Members);
+            return View(db.Members.ToList());
         }
 
         // GET: Members/Details/5
