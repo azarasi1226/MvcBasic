@@ -7,19 +7,19 @@ namespace MvcBasic
         // バンドルの詳細については、https://go.microsoft.com/fwlink/?LinkId=301862 を参照してください
         public static void RegisterBundles(BundleCollection bundles)
         {
+            // jQuery
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            // jQuery UI
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                        "~/Scripts/jquery-ui-{version}.js",
+                        "~/Scripts/app.js"));
+            // jQuery validation
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*",
                         "~/Scripts/ClientValidation/blackword.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.js",
-                        "~/Scripts/app.js"));
-
-            // 開発と学習には、Modernizr の開発バージョンを使用します。次に、実稼働の準備が
-            // 運用の準備が完了したら、https://modernizr.com のビルド ツールを使用し、必要なテストのみを選択します。
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 

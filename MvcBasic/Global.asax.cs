@@ -11,20 +11,20 @@ namespace MvcBasic
     {
         protected void Application_Start()
         {
-            //WEBアプリケーション起動設定
+            // WEBアプリケーション起動設定
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            //データベース初期化設定
+            // データベース初期化設定
             Database.SetInitializer<MvcBasicContext>(new MvcBasicInitializer());
 
-            //ビューエンジンをRazorだけにする（実行速度が少し上がる）
+            // ビューエンジンをRazorだけにする（実行速度が少し上がる）
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
 
-            //IPhone専用ページに飛ばす処理を登録
+            // IPhone専用ページに飛ばす処理を登録
             DisplayModeProvider.Instance.Modes.Insert(0,
                 new DefaultDisplayMode("iPhone")
                 {
@@ -33,7 +33,7 @@ namespace MvcBasic
                 }
             );
 
-            //Android専用ページに飛ばす処理を登録
+            // Android専用ページに飛ばす処理を登録
             DisplayModeProvider.Instance.Modes.Insert(1,
                 new DefaultDisplayMode("Android")
                 {

@@ -37,7 +37,7 @@ namespace MvcBasic.Controllers
             return View(db.Members.ToList());
         }
 
-        // GET: Members/Details/5
+        // GET: Members/Details/{id}
         public ActionResult Details(int? id)
         {
             if (id == null)
