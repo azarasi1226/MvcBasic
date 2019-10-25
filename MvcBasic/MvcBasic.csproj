@@ -128,9 +128,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\BeginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LinqController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
+    <Compile Include="Controllers\ValidMemberController.cs" />
     <Compile Include="DataBase\Entity\Article.cs" />
     <Compile Include="DataBase\Entity\Author.cs" />
     <Compile Include="DataBase\Entity\Comment.cs" />
@@ -142,6 +145,8 @@
     </Compile>
     <Compile Include="Helpers\MyHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIewModels\Members\Member.cs" />
+    <Compile Include="VIewModels\Validation\BlackwordAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -234,11 +239,22 @@
     <Content Include="Views\Home\Contact.iphone.cshtml" />
     <Content Include="Views\Home\Contact.Android.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Articles\Create.cshtml" />
+    <Content Include="Views\Articles\Delete.cshtml" />
+    <Content Include="Views\Articles\Details.cshtml" />
+    <Content Include="Views\Articles\Edit.cshtml" />
+    <Content Include="Views\Articles\Index.cshtml" />
+    <Content Include="Views\Articles\Navigation.cshtml" />
+    <Content Include="Views\Linq\Search.cshtml" />
+    <Content Include="Views\ValidMember\Create.cshtml" />
+    <Content Include="Views\ValidMember\Delete.cshtml" />
+    <Content Include="Views\ValidMember\Details.cshtml" />
+    <Content Include="Views\ValidMember\Edit.cshtml" />
+    <Content Include="Views\ValidMember\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="VIewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

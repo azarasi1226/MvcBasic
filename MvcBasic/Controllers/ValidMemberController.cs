@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -12,55 +11,40 @@ using MvcBasic.DataBase.Model;
 
 namespace MvcBasic.Controllers
 {
-    public class MembersController : Controller
+    public class ValidMemberController : Controller
     {
-        private readonly MvcBasicContext db = new MvcBasicContext();
+        private MvcBasicContext db = new MvcBasicContext();
 
-        public MembersController()
-        {
-            db.Database.Log = sql => Debug.Write(sql);
-        }
-
-        // GET: Members
+        // GET: ValidMember
         public ActionResult Index()
         {
-            var mb = db.Members.Select(x => new MvcBasic.ViewModel.Members.Member
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Birth = x.Birth,
-                Memo = x.Memo,
-                Married = x.Married,
-                Email = x.Email
-            }).ToList();
-
-            return View(db.Members);
+            return View(db.Members.ToList());
         }
 
-        // GET: Members/Details/5
+        // GET: ValidMember/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
             Member member = db.Members.Find(id);
             if (member == null)
             {
                 return HttpNotFound();
             }
-
             return View(member);
         }
 
-        // GET: Members/Create
+        // GET: ValidMember/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Members/Create
+        // POST: ValidMember/Create
+        // 過多ポスティング攻撃を防止するには、バインド先とする特定のプロパティを有効にしてください。
+        // 詳細については、https://go.microsoft.com/fwlink/?LinkId=317598 を参照してください。
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Email,Birth,Married,Memo")] Member member)
@@ -72,11 +56,10 @@ namespace MvcBasic.Controllers
                 return RedirectToAction("Index");
             }
 
-            
             return View(member);
         }
 
-        // GET: Members/Edit/5
+        // GET: ValidMember/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -91,7 +74,7 @@ namespace MvcBasic.Controllers
             return View(member);
         }
 
-        // POST: Members/Edit/5
+        // POST: ValidMember/Edit/5
         // 過多ポスティング攻撃を防止するには、バインド先とする特定のプロパティを有効にしてください。
         // 詳細については、https://go.microsoft.com/fwlink/?LinkId=317598 を参照してください。
         [HttpPost]
@@ -107,7 +90,7 @@ namespace MvcBasic.Controllers
             return View(member);
         }
 
-        // GET: Members/Delete/5
+        // GET: ValidMember/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -122,7 +105,7 @@ namespace MvcBasic.Controllers
             return View(member);
         }
 
-        // POST: Members/Delete/5
+        // POST: ValidMember/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -1,9 +1,8 @@
-﻿using MvcBasic.VIewModels.Validation;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace MvcBasic.DataBase.Entity
+namespace MvcBasic.ViewModel.Members
 {
     public class Member
     {
@@ -26,7 +25,8 @@ namespace MvcBasic.DataBase.Entity
         public bool Married { get; set; }
 
         [DisplayName("自己紹介")]
-        [Blackword("薬物,麻薬,毒,武器")]
+        [CustomValidation(typeof(Member), "CheckBlackWord")]
+        [Date(ErrorMessage = "田中が含まれています。")]
         [StringLength(100, ErrorMessage = "{0}は{1}文字以内で入力してください。")]
         public string Memo { get; set; }
 
@@ -44,6 +44,20 @@ namespace MvcBasic.DataBase.Entity
             }
 
             return ValidationResult.Success;
+        }
+    }
+    public class DateAttribute : ValidationAttribute
+    {
+        public override bool IsValid(object value)
+        {
+            if (value != null)
+            {
+                var str = value as string;
+
+                return str.Contains("田中");
+            }
+
+            return false;
         }
     }
 }

@@ -257,7 +257,7 @@ D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\ja\System.Web.WebPages.resources.d
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\ja\System.Web.WebPages.Deployment.resources.dll
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\ja\System.Web.WebPages.Razor.resources.dll
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csprojAssemblyReference.cache
-D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CoreCompileInputs.cache
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CopyComplete
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.dll
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.pdb
+D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CoreCompileInputs.cache
