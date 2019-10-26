@@ -24,7 +24,7 @@ namespace MvcBasic.Controllers
         // GET: Members
         public ActionResult Index()
         {
-            return View(db.Members.ToList());
+            return View(db.Members.ToList().Select(m => new MemberViewModel(m)));
         }
 
         // GET: Members/Details/{id}
@@ -43,7 +43,7 @@ namespace MvcBasic.Controllers
                 return HttpNotFound();
             }
 
-            return View(member);
+            return View(new MemberViewModel(member));
         }
 
         // GET: Members/Create
@@ -117,7 +117,7 @@ namespace MvcBasic.Controllers
                 return HttpNotFound();
             }
 
-            return View(member);
+            return View(new MemberViewModel(member));
         }
 
         // POST: Members/Delete/{id}
