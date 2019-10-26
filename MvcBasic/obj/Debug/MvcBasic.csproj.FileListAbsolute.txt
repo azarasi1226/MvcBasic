@@ -168,7 +168,6 @@ S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\bin\ja\System.Web.Razor.re
 S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\bin\ja\System.Web.WebPages.resources.dll
 S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\bin\ja\System.Web.WebPages.Deployment.resources.dll
 S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\bin\ja\System.Web.WebPages.Razor.resources.dll
-S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csprojAssemblyReference.cache
 S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CopyComplete
 S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\obj\Debug\MvcBasic.dll
 S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\obj\Debug\MvcBasic.pdb
@@ -261,3 +260,5 @@ D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CopyComplete
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.dll
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.pdb
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CoreCompileInputs.cache
+S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\bin\ja\EntityFramework.SqlServer.resources.dll
+S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csprojAssemblyReference.cache

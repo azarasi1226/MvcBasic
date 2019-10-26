@@ -129,11 +129,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
-    <Compile Include="Controllers\BeginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinqController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
-    <Compile Include="Controllers\ValidMemberController.cs" />
     <Compile Include="DataBase\Entity\Article.cs" />
     <Compile Include="DataBase\Entity\Author.cs" />
     <Compile Include="DataBase\Entity\Comment.cs" />
@@ -145,7 +143,7 @@
     </Compile>
     <Compile Include="Helpers\MyHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VIewModels\Members\Member.cs" />
+    <Compile Include="VIewModels\MemberViewModel.cs" />
     <Compile Include="VIewModels\ServerValidation\BlackwordAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -229,8 +227,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Begin\List.cshtml" />
-    <Content Include="Views\Begin\Show.cshtml" />
     <Content Include="Views\Members\Create.cshtml" />
     <Content Include="Views\Members\Delete.cshtml" />
     <Content Include="Views\Members\Details.cshtml" />
@@ -247,11 +243,6 @@
     <Content Include="Views\Articles\Index.cshtml" />
     <Content Include="Views\Articles\Navigation.cshtml" />
     <Content Include="Views\Linq\Search.cshtml" />
-    <Content Include="Views\ValidMember\Create.cshtml" />
-    <Content Include="Views\ValidMember\Delete.cshtml" />
-    <Content Include="Views\ValidMember\Details.cshtml" />
-    <Content Include="Views\ValidMember\Edit.cshtml" />
-    <Content Include="Views\ValidMember\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

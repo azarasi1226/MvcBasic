@@ -1,11 +1,10 @@
-﻿using System.Data.Entity;
+﻿using MvcBasic.DataBase.Entity;
+using MvcBasic.DataBase.Model;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using System.Data.Entity.Infrastructure;
-using System.Diagnostics;
-using MvcBasic.DataBase.Model;
-using MvcBasic.DataBase.Entity;
-using System.Linq;
 
 namespace MvcModel.Controllers
 {
@@ -16,7 +15,7 @@ namespace MvcModel.Controllers
         public ActionResult Navigation(int? id)
         {
             // パラメーターが不正な場合400エラー
-            if(id == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -24,7 +23,7 @@ namespace MvcModel.Controllers
             Article article = db.Articles.Find(id);
 
             // 記事が存在しなかった場合404エラー
-            if(article == null)
+            if (article == null)
             {
                 return HttpNotFound();
             }

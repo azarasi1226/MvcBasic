@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Web.Mvc;
 
-namespace MvcBasic.VIewModels.Validation
+namespace MvcBasic.ViewModels.ServerValidation
 {
     public class BlackwordAttribute : ValidationAttribute, IClientValidatable
     {
@@ -12,21 +12,21 @@ namespace MvcBasic.VIewModels.Validation
         public BlackwordAttribute(string blackword)
         {
             this._blackword = blackword;
-            this.ErrorMessage = "{0}には{1}を含むことはできません";
+            this.ErrorMessage = "{0}には禁止ワードを含むことはできません";
         }
 
         // プロパティの表示名と値リストでエラーエラーメッセージを整形
         public override string FormatErrorMessage(string name)
         {
             return string.Format(CultureInfo.CurrentCulture,
-                                 ErrorMessageString, name, this._blackword);
+                                 ErrorMessageString, name);
         }
 
         // 検証
         public override bool IsValid(object value)
         {
             // 値が入力されていなければスキップ
-            if(value == null)
+            if (value == null)
             {
                 return true;
             }

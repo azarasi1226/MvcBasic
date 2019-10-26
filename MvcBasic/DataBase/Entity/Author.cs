@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace MvcBasic.DataBase.Entity
 {
@@ -15,7 +13,7 @@ namespace MvcBasic.DataBase.Entity
         public string Name { get; set; }
 
         [DisplayName("メールアドレス")]
-        public string Email { get; set;}
+        public string Email { get; set; }
 
         [DisplayName("生年月日")]
         [DisplayFormat(DataFormatString = "{0:yyyy年MM月dd日}")]

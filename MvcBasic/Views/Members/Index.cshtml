@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<MvcBasic.DataBase.Entity.Member>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "一覧";
 }
 
-<h2>Index</h2>
+<h2>目次</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("新規ユーザー作成", "Create")
 </p>
 <table class="table">
     <tr>
@@ -45,9 +45,9 @@
             @Html.DisplayFor(modelItem => item.Memo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id , tmp = "aa"}) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("修正", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("詳細", "Details", new { id=item.Id }) |
+            @Html.ActionLink("消去", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
