@@ -1,0 +1,13 @@
+﻿@model IEnumerable<String>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>コメントを書いた人(重複なし)</h2>
+
+<hr />
+@foreach (var item in Model)
+{
+    <p>@Html.DisplayFor(_ => item)</p>
+}

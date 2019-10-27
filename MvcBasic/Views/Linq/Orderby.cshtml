@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MvcBasic.DataBase.Entity.Article>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>並び替え</h2>
+
+<hr />
+<p>アクセス数:@ViewBag.Count</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Category)</th>
+            <th>@Html.DisplayNameFor(model => model.Published)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(_ => item.Title)</td>
+                <td>@Html.DisplayFor(_ => item.Category)</td>
+                <td>@Html.DisplayFor(_ => item.Published)</td>
+            </tr>
+        }
+    </tbody>
+</table>
