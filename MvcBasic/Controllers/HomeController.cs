@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace MvcBasic.Controllers
 {
@@ -24,6 +25,12 @@ namespace MvcBasic.Controllers
             ViewBag.userAgent = userAgent;
 
             return View();
+        }
+
+        [ChildActionOnly]
+        public ActionResult CurrentTime()
+        {
+            return PartialView("_CurrentTimePartial", DateTime.Now);
         }
     }
 }

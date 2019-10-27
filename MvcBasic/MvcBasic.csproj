@@ -244,6 +244,7 @@
     <Content Include="Views\Articles\Navigation.cshtml" />
     <Content Include="Views\Linq\Search.cshtml" />
     <Content Include="Views\Home\_TabelPartial.cshtml" />
+    <Content Include="Views\Shared\_CurrentTimePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
