@@ -243,6 +243,7 @@
     <Content Include="Views\Articles\Index.cshtml" />
     <Content Include="Views\Articles\Navigation.cshtml" />
     <Content Include="Views\Linq\Search.cshtml" />
+    <Content Include="Views\Home\_TabelPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
