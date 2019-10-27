@@ -16,10 +16,12 @@ namespace MvcBasic.ViewModels
         public string Name { get; set; }
 
         [DisplayName("メールアドレス")]
+        [Required(ErrorMessage = "{0}は必須です")]
         [EmailAddress(ErrorMessage = "メールアドレスの形式で入力してください。")]
         public string Email { get; set; }
 
         [DisplayName("メールアドレス(確認)")]
+        [Required(ErrorMessage = "{0}は必須です")]
         [Compare(nameof(Email), ErrorMessage = "{1}と同じ内容を入力してください")]
         public string EmailConfirmed { get; set; }
 

@@ -1,12 +1,22 @@
 ﻿using MvcBasic.DataBase.Model;
 using System.Linq;
 using System.Web.Mvc;
+using System;
+using System.Diagnostics;
 
 namespace MvcBasic.Controllers
 {
     public class LinqController : Controller
     {
-        private MvcBasicContext db = new MvcBasicContext();
+        private readonly MvcBasicContext db = new MvcBasicContext();
+        private int accessCount; 
+
+        public LinqController()
+        {
+            // ログ出力
+            db.Database.Log = sql => Debug.Write(sql);
+            Console.WriteLine("Membersインスタンスが作成されました");
+        }
 
         // GET: Linq
         public ActionResult Index()
@@ -14,13 +24,12 @@ namespace MvcBasic.Controllers
             return View();
         }
 
-
-        // GET: Search
+        // GET: Linq/Search
         public ActionResult Search(string keyword, bool? released)
         {
             var query = db.Articles.AsQueryable();
 
-            // [キーワード]欄がから出ない場合、その値で部分検索をかける
+            // [キーワード]欄が空でない場合、その値で部分検索をかける
             if (!string.IsNullOrWhiteSpace(keyword))
             {
                 query = query.Where(a => a.Title.Contains(keyword));
@@ -33,6 +42,39 @@ namespace MvcBasic.Controllers
             }
 
             return View(query.ToList());
+        }
+
+        //GET: Linq/Orderby
+        public ActionResult Orderby()
+        {
+            this.accessCount++;
+            var articles = db.Articles
+                             .OrderBy(a => a.Published)
+                             .ThenByDescending(a => a.Title);
+
+            ViewBag.Count = this.accessCount;
+            return View(articles.ToList());
+        }
+
+        //GET: Linq/Distinct()
+        public ActionResult Distinct()
+        {
+            var comments = db.Comments
+                             .OrderBy(c => c.Name)
+                             .Select(c => c.Name)
+                             .Distinct();
+
+            return View(comments.ToList());
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+
+            base.Dispose(disposing);
         }
     }
 }

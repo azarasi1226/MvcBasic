@@ -245,6 +245,8 @@
     <Content Include="Views\Linq\Search.cshtml" />
     <Content Include="Views\Home\_TabelPartial.cshtml" />
     <Content Include="Views\Shared\_CurrentTimePartial.cshtml" />
+    <Content Include="Views\Linq\Orderby.cshtml" />
+    <Content Include="Views\Linq\Distinct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
