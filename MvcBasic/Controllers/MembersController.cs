@@ -90,7 +90,7 @@ namespace MvcBasic.Controllers
         // POST: Members/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Email,EmailConfirmed,Birth,Married,Memo")] MemberViewModel memberVM)
+        public ActionResult Edit([Bind(Include = "Id,Name,Email,EmailConfirmed,Birth,Married")] MemberViewModel memberVM)
         {
             if (ModelState.IsValid)
             {
