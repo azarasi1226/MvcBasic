@@ -248,11 +248,12 @@
     <Content Include="Views\Shared\_CurrentTimePartial.cshtml" />
     <Content Include="Views\Linq\Orderby.cshtml" />
     <Content Include="Views\Linq\Distinct.cshtml" />
+    <Content Include="Views\Bind\CreateList.cshtml" />
+    <Content Include="Views\Bind\Upload.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\Photos\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Bind\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

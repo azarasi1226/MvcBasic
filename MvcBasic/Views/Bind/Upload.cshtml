@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Upload";
+}
+
+<h2>Upload</h2>
+
+@using (Html.BeginForm("Upload", "Bind", FormMethod.Post,new {enctype = "multipart/form-data" }))
+{
+    @Html.TextBox("data", "", new { type = "file", size = 75 })
+    <input type="submit" value="アップロード" />
+    <div class="text-danger">@ViewBag.Message</div>
+}
+
