@@ -79,11 +79,11 @@ namespace MvcBasic.Controllers
             }
 
             //　保存
-            //保存を確認。ただ、Debug、Releaseで保存される先が違うので注意。
-            //作業フォルダとか論外です。
+            //保存を確認。Debug、Releaseで保存される先が違うので注意。
+            //同じ名前で登録すると上書きされる。
             data.SaveAs(Path.Combine(
                 Server.MapPath("~/App_Data/Photos"),
-                Path.GetFileName(data.FileName)    
+                Path.GetFileName(DateTime.Now.ToString())    
             ));
             ViewBag.Message = "保存しました。";
 
