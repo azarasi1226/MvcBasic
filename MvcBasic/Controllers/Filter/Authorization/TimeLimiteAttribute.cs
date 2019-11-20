@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MvcBasic.Controllers.Filter.Authorization
@@ -12,7 +8,6 @@ namespace MvcBasic.Controllers.Filter.Authorization
     /// </summary>
     public class TimeLimiteAttribute : FilterAttribute, IAuthorizationFilter
     {
-        //有効な時間範囲
         private DateTime _first = DateTime.MinValue;
         private DateTime _last  = DateTime.MaxValue;
 
@@ -53,10 +48,6 @@ namespace MvcBasic.Controllers.Filter.Authorization
             var current = DateTime.Now;
             if (!(this._first <= current && current <= this._last))
             {
-                Debug.WriteLine("今" + current);
-                Debug.WriteLine("から" + _first);
-                Debug.WriteLine("まで" + _last);
-
                 var msg = String.Format("このページは{0}から{1}までの期間のみ有効です",
                     this._first.ToLongDateString(),
                     this._last.ToLongDateString());

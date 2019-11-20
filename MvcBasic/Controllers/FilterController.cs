@@ -24,11 +24,10 @@ namespace MvcBasic.Controllers
         // GET: Filter/Exception2
         public ActionResult Exception2()
         {
-            throw new ArgumentException("この例外の専用ページに飛ばされるはずです。");
+            throw new ArgumentException("ArgumentException用に用意されたページに飛ばされるはずです。");
         }
 
         // GET: Filter/Cach
-        //10秒のキャッシュを設ける
         [OutputCache(Duration = 10)]
         public ActionResult Cach()
         {
@@ -36,7 +35,6 @@ namespace MvcBasic.Controllers
         }
 
         // GET: Filter/Limit
-        //なんかできてないから家でやる
         [TimeLimite("2014/12/1", "2019/11/11")]
         public ActionResult Limit()
         {
