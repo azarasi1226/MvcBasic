@@ -131,6 +131,8 @@
     <Compile Include="Controllers\ActionResultController.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\BindController.cs" />
+    <Compile Include="Controllers\FilterController.cs" />
+    <Compile Include="Controllers\Filter\Authorization\TimeLimiteAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinqController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
@@ -256,10 +258,13 @@
     <Content Include="Views\State\Cookie.cshtml" />
     <Content Include="Views\State\SessionRecord.cshtml" />
     <Content Include="Views\State\Index.cshtml" />
+    <Content Include="Views\Shared\ErrorSpare.cshtml" />
+    <Content Include="Views\Filter\Cach.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Photos\" />
     <Folder Include="Models\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

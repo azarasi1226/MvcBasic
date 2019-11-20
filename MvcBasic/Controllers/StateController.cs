@@ -21,6 +21,7 @@ namespace MvcBasic.Controllers
         // GET: State/Cookie
         public ActionResult Cookie()
         {
+            //リクエストからクッキーを取り出す
             if(Request.Cookies["email"] != null)
             {
                 ViewBag.Email = Request.Cookies["email"].Value;
@@ -33,6 +34,7 @@ namespace MvcBasic.Controllers
         [HttpPost]
         public ActionResult Cookie(string email)
         {
+            //クッキーをレスポンスに設定
             Response.AppendCookie(new HttpCookie("email")
             {
                 Value    = email,
@@ -48,6 +50,7 @@ namespace MvcBasic.Controllers
         //Sessionって名前だと元からあるプロパティと競合するので仕方なく...
         public ActionResult SessionRecord()
         {
+            //セッションemailを取得
             ViewBag.Email = Session["email"];
 
             return View();
