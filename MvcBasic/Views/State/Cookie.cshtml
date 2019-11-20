@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Cookie";
+}
+
+<h2>Cookie</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("email", "メールアドレス")
+    @Html.TextBox("email", (String)ViewBag.Email, new {@class = "form-control" })
+    <input type="submit" value="送信">
+}

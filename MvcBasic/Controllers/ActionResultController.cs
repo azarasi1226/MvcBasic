@@ -46,11 +46,13 @@ namespace MvcBasic.Controllers
                         m.Memo.Replace("\r\n", "")
                     )));
 
-            //Response.AddHeader("Content-Disposition", "attachment;filename=tsv.txt");
+            Response.AddHeader("Content-Disposition", "attachment;filename=tsv.txt");
+
             return Content(tsv.ToString(), 
-                "text/html"
+                "text/plain"
                 );
 
         }
+
     }
 }

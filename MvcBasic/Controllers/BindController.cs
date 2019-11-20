@@ -83,7 +83,7 @@ namespace MvcBasic.Controllers
             //同じ名前で登録すると上書きされる。
             data.SaveAs(Path.Combine(
                 Server.MapPath("~/App_Data/Photos"),
-                Path.GetFileName(DateTime.Now.ToString())    
+                Path.GetFileName(data.FileName)    
             ));
             ViewBag.Message = "保存しました。";
 

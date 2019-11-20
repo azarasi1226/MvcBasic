@@ -18,7 +18,7 @@ namespace MvcBasic
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             // データベース初期化設定
-            Database.SetInitializer<MvcBasicContext>(new MvcBasicInitializer());
+            //Database.SetInitializer<MvcBasicContext>(new MvcBasicInitializer());
 
             // ビューエンジンをRazorだけにする（実行速度が少し上がる）
             ViewEngines.Engines.Clear();

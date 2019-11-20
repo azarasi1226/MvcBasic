@@ -134,6 +134,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinqController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
+    <Compile Include="Controllers\StateController.cs" />
     <Compile Include="DataBase\Entity\Article.cs" />
     <Compile Include="DataBase\Entity\Author.cs" />
     <Compile Include="DataBase\Entity\Comment.cs" />
@@ -252,6 +253,9 @@
     <Content Include="Views\Bind\CreateList.cshtml" />
     <Content Include="Views\Bind\Upload.cshtml" />
     <Content Include="Views\ActionResult\ViewResult.cshtml" />
+    <Content Include="Views\State\Cookie.cshtml" />
+    <Content Include="Views\State\SessionRecord.cshtml" />
+    <Content Include="Views\State\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Photos\" />
