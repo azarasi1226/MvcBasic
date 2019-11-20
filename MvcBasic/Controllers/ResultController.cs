@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Net;
+using System.Web.Mvc;
 
 namespace MvcBasic.Controllers
 {
@@ -19,7 +20,7 @@ namespace MvcBasic.Controllers
                 return File(filePath, "image/jpeg", "gazou.jpg");
             }
 
-            return HttpNotFound("画像がないよ");
+            return new HttpStatusCodeResult(HttpStatusCode.OK);
         }
     }
 }
