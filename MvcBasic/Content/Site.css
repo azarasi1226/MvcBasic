@@ -23,6 +23,9 @@ textarea {
     max-width: 280px;
 }
 
+
+/*----------以下ユーザー設定---------*/
+/*エラー文字列の色を設定*/
 .input-validation-error 
 {
     border-color:red;

@@ -29,6 +29,11 @@ namespace MvcBasic
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/Site.css"));
+
+            //バンドル＆ミニフィケーションの設定
+            //true  = 514k
+            //false = 1.1m(半分も違う...)
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

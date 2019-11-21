@@ -134,6 +134,7 @@
     <Compile Include="Controllers\FilterController.cs" />
     <Compile Include="Controllers\Filter\Authorization\TimeLimiteAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LibraryController.cs" />
     <Compile Include="Controllers\LinqController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
@@ -261,6 +262,7 @@
     <Content Include="Views\State\Index.cshtml" />
     <Content Include="Views\Shared\ErrorSpare.cshtml" />
     <Content Include="Views\Filter\Cach.cshtml" />
+    <Content Include="Views\Library\Jquery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Photos\" />

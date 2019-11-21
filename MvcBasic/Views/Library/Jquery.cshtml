@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Jquery";
+}
+
+<h2>Jquery</h2>
+<div id="books">9999
+    <p>
+        <img class="other" src="https://webbibouroku.com/wp-content/uploads/eye_javascript.png">
+    </p>
+    <p>
+        <img class="other" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png">
+    </p>
+</div>
+
+@section scripts{
+<script>
+    $(function () {
+        console.log("Jqeryが読み込まれました");
+        $('.other')
+            .mouseover((e) => {
+                $('.other').hide();
+                console.log("マウスオーバーを検知");
+            })
+            .mouseleave((e) => {
+                $('.other').show();
+                console.log("マウスリーブを検知");
+            })
+    });
+</script>
+}
+
