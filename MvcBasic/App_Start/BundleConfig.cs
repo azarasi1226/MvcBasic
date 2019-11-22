@@ -4,7 +4,6 @@ namespace MvcBasic
 {
     public class BundleConfig
     {
-        // バンドルの詳細については、https://go.microsoft.com/fwlink/?LinkId=301862 を参照してください
         public static void RegisterBundles(BundleCollection bundles)
         {
             // jQuery
@@ -20,6 +19,7 @@ namespace MvcBasic
                         "~/Scripts/jquery.validate*",
                         "~/Scripts/ClientValidation/blackword.js"));
 
+            //
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 

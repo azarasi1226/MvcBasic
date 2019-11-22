@@ -263,6 +263,7 @@
     <Content Include="Views\Shared\ErrorSpare.cshtml" />
     <Content Include="Views\Filter\Cach.cshtml" />
     <Content Include="Views\Library\Jquery.cshtml" />
+    <Content Include="Views\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Photos\" />

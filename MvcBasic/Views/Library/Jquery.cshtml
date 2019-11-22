@@ -18,12 +18,12 @@
     $(function () {
         console.log("Jqeryが読み込まれました");
         $('.other')
-            .mouseover((e) => {
-                $('.other').hide();
+            .mouseover((e => {
+                $(this).hide();
                 console.log("マウスオーバーを検知");
             })
             .mouseleave((e) => {
-                $('.other').show();
+                $(this).show();
                 console.log("マウスリーブを検知");
             })
     });
