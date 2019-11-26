@@ -9,7 +9,7 @@ namespace MvcBasic
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             //ログインチェック
-            filters.Add(new LoginCheckAttribute());
+            //filters.Add(new LoginCheckAttribute());
 
             //基本的な例外設定
             filters.Add(new HandleErrorAttribute());

@@ -262,3 +262,9 @@ D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.pdb
 S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\bin\ja\EntityFramework.SqlServer.resources.dll
 S:\Development\WorkSpace\C#\ASP.NET\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csprojAssemblyReference.cache
 D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\obj\Debug\MvcBasic.csproj.CoreCompileInputs.cache
+D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\System.Net.Http.Formatting.dll
+D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\System.Web.Http.dll
+D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\System.Web.Http.WebHost.dll
+D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\System.Net.Http.Formatting.xml
+D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\System.Web.Http.xml
+D:\Study\C#\ASP.NET MVC\MvcBasic\MvcBasic\bin\System.Web.Http.WebHost.xml
