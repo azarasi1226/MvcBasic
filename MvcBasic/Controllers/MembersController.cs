@@ -22,6 +22,7 @@ namespace MvcBasic.Controllers
         }
 
         // GET: Members
+        [OverrideAuthorization]
         public ActionResult Index()
         {
             return View(db.Members.ToList().Select(m => new MemberViewModel(m)));

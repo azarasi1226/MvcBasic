@@ -19,7 +19,7 @@ namespace MvcBasic
                         "~/Scripts/jquery.validate*",
                         "~/Scripts/ClientValidation/blackword.js"));
 
-            //
+           
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 

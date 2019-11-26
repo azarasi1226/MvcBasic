@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcBasic.Controllers.Filter.Authorization;
+using System;
 using System.Web.Mvc;
 
 namespace MvcBasic
@@ -7,6 +8,9 @@ namespace MvcBasic
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            //ログインチェック
+            filters.Add(new LoginCheckAttribute());
+
             //基本的な例外設定
             filters.Add(new HandleErrorAttribute());
 

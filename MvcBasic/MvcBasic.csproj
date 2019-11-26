@@ -132,6 +132,7 @@
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\BindController.cs" />
     <Compile Include="Controllers\FilterController.cs" />
+    <Compile Include="Controllers\Filter\Authorization\LoginCheckAttribute.cs" />
     <Compile Include="Controllers\Filter\Authorization\TimeLimiteAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibraryController.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VIewModels\MemberViewModel.cs" />
     <Compile Include="VIewModels\ServerValidation\BlackwordAttribute.cs" />
+    <Compile Include="VIewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -263,7 +265,8 @@
     <Content Include="Views\Shared\ErrorSpare.cshtml" />
     <Content Include="Views\Filter\Cach.cshtml" />
     <Content Include="Views\Library\Jquery.cshtml" />
-    <Content Include="Views\View.cshtml" />
+    <Content Include="Views\Filter\Login.cshtml" />
+    <Content Include="Views\Filter\UserInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Photos\" />

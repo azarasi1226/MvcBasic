@@ -4,7 +4,7 @@ using System.Web.Mvc;
 namespace MvcBasic.Controllers.Filter.Authorization
 {
     /// <summary>
-    /// 期間限定アクセスを設定できる認証フィルター
+    /// 期間限定アクセスを設定できる承認フィルター
     /// </summary>
     public class TimeLimiteAttribute : FilterAttribute, IAuthorizationFilter
     {
@@ -37,7 +37,6 @@ namespace MvcBasic.Controllers.Filter.Authorization
             this.Last  = last;
         }
 
-        //アクションメソッドの実行の最初に読み出されるメソッド
         public void OnAuthorization(AuthorizationContext filterContext)
         {
             if (filterContext == null)
@@ -52,7 +51,6 @@ namespace MvcBasic.Controllers.Filter.Authorization
                     this._first.ToLongDateString(),
                     this._last.ToLongDateString());
 
-                //ContentResultで画面を表示する
                 filterContext.Result = new ContentResult
                 {
                     Content = msg
